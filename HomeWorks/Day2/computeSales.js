@@ -2,12 +2,11 @@
 "use Strict"
 
 function computeSalesCommission(isSalary,salesAmount){
-
  
     if(isSalary===true){
         
         if(salesAmount<300){
-            commision =0;
+          let  commision =0;
        
             return(commision)
         }

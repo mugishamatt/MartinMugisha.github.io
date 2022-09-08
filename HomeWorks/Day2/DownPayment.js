@@ -6,6 +6,7 @@
  * range of cost and interest
  *
  */
+
 function calcDownpayment(cost){
  
     if(cost>=0&&cost<50000){
