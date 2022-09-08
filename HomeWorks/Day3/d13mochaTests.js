@@ -2,7 +2,7 @@
 "use strict"
 
 
-const functionsModule = require("./functions.js");
+const functionsModule = require("./allFunctions.js");
  const computeSalesCommission = functionsModule.computeSalesCommission;
  const compoundInterest=functionsModule.compoundInterest; 
  const calcDownpayment=functionsModule.calcDownpayment; 
@@ -10,7 +10,7 @@ const functionsModule = require("./functions.js");
  const multDigit=functionsModule.multDigit;
  const convertFahrenheit=functionsModule.convertFahrenheit;
  const calcDistance=functionsModule.calcDistance;
- 
+
 const assert = require("assert");
 //const { describe } = require("node:test");
 // const { describe, it } = require("node:test");
