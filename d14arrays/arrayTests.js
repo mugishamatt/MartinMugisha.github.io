@@ -2,12 +2,14 @@
 
 // You need the assert and function name declarations to test in node.  
 // Comment these out when you send it to the browser with the index.html mocha setup page.
-// const assert = require("assert");  //always need this with node
-// const myExports = require("./arrays.js");  //with node need the name of your file with your functions here
-// const maxOfThree = myExports.maxOfThree;  //do this for all of the functions used in the Mocha tests
-//  const multiply = myExports.multiply;
-// const sum = myExports.sum;
-// const findLongestWord=myExports.findLongestWord;
+const assert = require("assert");  //always need this with node
+const myExports = require("./arrays.js");  //with node need the name of your file with your functions here
+const maxOfThree = myExports.maxOfThree;  //do this for all of the functions used in the Mocha tests
+ const multiply = myExports.multiply;
+const sum = myExports.sum;
+const findLongestWord=myExports.findLongestWord;
+const reverseArray=myExports.reverseArray;
+const reverseArrayInPlace=myExports.reverseArray;
 
 /* global assert maxOfThree sum multiply findLongestWord reverseArray reverseArrayInPlace scoreExams generateArray */
 
@@ -84,29 +86,30 @@ describe("findLongestWord", function () {
 });
 
 
-// /*
+
+
 // 4.	Reverse an Array 
 // Arrays have a reverse method that changes the array by inverting the order in which its elements appear. For this exercise, write two functions, reverseArray and 
 // reverseArrayInPlace. The first, reverseArray, takes an array as argument and produces a new array that has the same elements in the inverse order. The second, 
 // reverseArrayInPlace, does what the reverse method does: it modifies the array given as argument by reversing its elements. Neither may use the standard reverse method. 
 // */
-// describe("reverseArray", function () {
-//     it("tests reverseArray odd number elements", function () {
-//         assert.deepEqual(reverseArray(["A", "B", "C"]), ["C", "B", "A"]);
-//     });
-//     it("tests reverse even number elements", function () {
-//         assert.deepEqual(reverseArrayInPlace(["A", "B", "C", "D"]), ["D", "C", "B", "A"]);
-//         assert.deepEqual(reverseArray(["A", "B", "C", "D"]), ["D", "C", "B", "A"]);
-//     });
-//     it("tests reverse odd number elements", function () {
-//         assert.deepEqual(reverseArrayInPlace([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
-//         assert.deepEqual(reverseArray([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
-//     });
-//     it("tests that the original array is returned", function () {
-//         const testArr = [1, 2, 3, 4, 5];
-//         assert.strictEqual(reverseArrayInPlace(testArr), testArr); //element order may be different, but it is the same reference
-//     });
-// });
+describe("reverseArray", function () {
+    it("tests reverseArray odd number elements", function () {
+        assert.deepEqual(reverseArray(["A", "B", "C"]), ["C", "B", "A"]);
+    });
+    it("tests reverse even number elements", function () {
+        assert.deepEqual(reverseArrayInPlace(["A", "B", "C", "D"]), ["D", "C", "B", "A"]);
+        assert.deepEqual(reverseArray(["A", "B", "C", "D"]), ["D", "C", "B", "A"]);
+    });
+    it("tests reverse odd number elements", function () {
+        assert.deepEqual(reverseArrayInPlace([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
+        assert.deepEqual(reverseArray([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
+    });
+    it("tests that the original array is returned", function () {
+        const testArr = [1, 2, 3, 4, 5];
+        assert.strictEqual(reverseArrayInPlace(testArr), testArr); //element order may be different, but it is the same reference
+    });
+});
 
 // /*
 // 5.  Write a function, scoreExams, that takes an array of arrays of student answers and an array of the correct answers.  

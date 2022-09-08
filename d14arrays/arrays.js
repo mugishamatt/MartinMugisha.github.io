@@ -1,9 +1,10 @@
 "use strict";
 //You need the module.exports when testing in node.  Comment it out when you send your file to the browser
-// module.exports = {maxOfThree: maxOfThree, sum: sum, multiply: multiply,findLongestWord:findLongestWord }; //add all of your function names here that you need for the node mocha tests
+module.exports = {maxOfThree: maxOfThree, sum: sum, multiply: multiply,
+    findLongestWord:findLongestWord,reverseArray:reverseArray ,reverseArrayInPlace:reverseArrayInPlace}; //add all of your function names here that you need for the node mocha tests
 
 /**
- *
+//  
  * @param {number} a is a number
  * @param {number} b is a number
  * @param {number} c is a number
@@ -62,6 +63,31 @@ function findLongestWord(array) {
     let arr=["this", "is", "a", "test", "longest"];
 
       console.log(findLongestWord(arr))
+//
 
-
+    /**
+ * 
+ * @param {array} arr - array of elements
+ * @returns {array} - new array which is arr reversed
+ */
+function reverseArray(arr) {
+    let newArray = [];
+    for (let element of arr) {
+        newArray.unshift(element);
+    }
+    return newArray;
+}
+/**
+ * 
+ * @param {array} arr - array of elements 
+ * @returns {array} - original array reversed
+ */
+ function reverseArrayInPlace(arr) {
+    let newArray = [];
+    for (let element of arr) {
+        newArray.unshift(element);
+    }
+    arr = newArray;
+    return arr;
+}
 
