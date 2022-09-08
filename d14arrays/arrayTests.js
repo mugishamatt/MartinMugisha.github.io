@@ -2,11 +2,12 @@
 
 // You need the assert and function name declarations to test in node.  
 // Comment these out when you send it to the browser with the index.html mocha setup page.
-const assert = require("assert");  //always need this with node
-const myExports = require("./arrays.js");  //with node need the name of your file with your functions here
-const maxOfThree = myExports.maxOfThree;  //do this for all of the functions used in the Mocha tests
-// const multiply = myExports.multiply;
+// const assert = require("assert");  //always need this with node
+// const myExports = require("./arrays.js");  //with node need the name of your file with your functions here
+// const maxOfThree = myExports.maxOfThree;  //do this for all of the functions used in the Mocha tests
+//  const multiply = myExports.multiply;
 // const sum = myExports.sum;
+// const findLongestWord=myExports.findLongestWord;
 
 /* global assert maxOfThree sum multiply findLongestWord reverseArray reverseArrayInPlace scoreExams generateArray */
 
@@ -48,39 +49,39 @@ describe("maxOfThree", function () {
     });
 });
 
-// /*
+
 // 2.	Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10,
 //  and multiply([1,2,3,4]) should return 24. 
-//  */
-// describe("sum and multiply", function () {
-//     it("tests sum of 1 2 3 and 1 2 3 4", function () {
-//         assert.strictEqual(sum([1, 2, 3]), 6);
-//         assert.strictEqual(sum([1, 2, 3, 4]), 10);
-//     });
-//     it("tests multiply 3 2 10 and 1 2 3 4", function () {
-//         assert.strictEqual(multiply([3, 2, 10]), 60);
-//         assert.strictEqual(multiply([1, 2, 3, 4]), 24);
-//     });
-// });
+
+describe("sum and multiply", function () {
+    it("tests sum of 1 2 3 and 1 2 3 4", function () {
+        assert.strictEqual(sum([1, 2, 3]), 6);
+        assert.strictEqual(sum([1, 2, 3, 4]), 10);
+    });
+    it("tests multiply 3 2 10 and 1 2 3 4", function () {
+        assert.strictEqual(multiply([3, 2, 10]), 60);
+        assert.strictEqual(multiply([1, 2, 3, 4]), 24);
+    });
+});
 
 
 // /*
 // 3.	Write a function findLongestWord() that takes an array of words and returns the length of the longest one. 
 // */
-// describe("findLongestWord", function () {
-//     it("tests longest", function () {
-//         assert.strictEqual(findLongestWord(["this", "is", "a", "test", "longest"]), 7);
-//     });
-//     it("tests longest with spaces", function () {
-//         assert.strictEqual(findLongestWord(["this", "is", "a word with spaces", "test", "longest"]), 18);
-//     });
-//     it("tests longest with equal length words", function () {
-//         assert.strictEqual(findLongestWord(["is", "is", "is", "is", "is"]), 2);
-//     });
-//     it("tests longest with some words equal length", function () {
-//         assert.strictEqual(findLongestWord(["this", "is", "this", "is", "is"]), 4);
-//     });
-// });
+describe("findLongestWord", function () {
+    it("tests longest", function () {
+        assert.strictEqual(findLongestWord(["this", "is", "a", "test", "longest"]), 7);
+    });
+    it("tests longest with spaces", function () {
+        assert.strictEqual(findLongestWord(["this", "is", "a word with spaces", "test", "longest"]), 18);
+    });
+    it("tests longest with equal length words", function () {
+        assert.strictEqual(findLongestWord(["is", "is", "is", "is", "is"]), 2);
+    });
+    it("tests longest with some words equal length", function () {
+        assert.strictEqual(findLongestWord(["this", "is", "this", "is", "is"]), 4);
+    });
+});
 
 
 // /*

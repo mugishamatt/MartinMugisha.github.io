@@ -1,6 +1,6 @@
 "use strict";
 //You need the module.exports when testing in node.  Comment it out when you send your file to the browser
-module.exports = {maxOfThree: maxOfThree, sum: sum, multiply: multiply }; //add all of your function names here that you need for the node mocha tests
+// module.exports = {maxOfThree: maxOfThree, sum: sum, multiply: multiply,findLongestWord:findLongestWord }; //add all of your function names here that you need for the node mocha tests
 
 /**
  *
@@ -10,11 +10,12 @@ module.exports = {maxOfThree: maxOfThree, sum: sum, multiply: multiply }; //add 
  * @returns {number} largest of a, b, c
  */
 function maxOfThree(a, b, c) {
-  if (a > b) {
+  if (a > b&&a>c) {
     return a;
-  } else if (b > c) {
+ 
+  } else if(b>c){
     return b;
-  } else {
+  }else{
     return c;
   }
 }
@@ -37,7 +38,30 @@ function sum(arr) {
  * @returns {number} sum of arr numbers
  */
 function multiply(arr) {
-  let tot = 1;
-
+    let tot = 1;
+    for(let num of arr){
+    tot*=num
+    }
   return tot;
 }
+
+/**
+ * 
+ * @param {Array} array of words
+ */
+
+function findLongestWord(array) {
+        let word = "";
+        for (let i = 0; i < array.length; i++) {
+          if (array[i].length>word.length) {
+            word = array[i];
+          }
+        }
+        return word.length;
+}
+    let arr=["this", "is", "a", "test", "longest"];
+
+      console.log(findLongestWord(arr))
+
+
+
