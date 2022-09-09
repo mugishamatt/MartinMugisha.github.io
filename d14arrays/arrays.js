@@ -65,36 +65,31 @@ function findLongestWord(array) {
 
       console.log(findLongestWord(arr))
 //
-
-    /**
- * 
- * @param {array} arr - array of elements
- * @returns {array} - new array which is arr reversed
- */
 function reverseArray(arr) {
-    let newArray = [];
-    for (let element of arr) {
-        newArray.unshift(element);
-    }
-    return newArray;
+  const newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+      newArray[arr.length - i - 1] = arr[i];
+  }
+  return newArray;
 }
 
- /**
- * 
- * @param {array} arr The array of numbers; 
- * @returns  {array} arr returns the reversed array;
- */
-function reverseArrayInPlace( arr1 ){
 
-  let newArray= arr1.splice(0);
-  
-  for (let i =  newArray.length-1; i >= 0; i--) {
-    arr1.push (newArray[i]); 
+/**
+* 
+* @param {array} arr is any array
+* @returns {Array} the same array with elements reversed
+*
+*/
+function reverseArrayInPlace(arr) {
+  const half = Math.floor(arr.length / 2);
+  for (let i = 0; i < half; i++) {
+      const temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = temp;
   }
 
-  return arr1;
+  return arr;
 }
-//
 
 /************************************************************** */
 /**
