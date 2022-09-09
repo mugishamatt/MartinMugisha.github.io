@@ -1,7 +1,8 @@
 "use strict";
 //You need the module.exports when testing in node.  Comment it out when you send your file to the browser
 module.exports = {maxOfThree: maxOfThree, sum: sum, multiply: multiply,
-    findLongestWord:findLongestWord,reverseArray:reverseArray ,reverseArrayInPlace:reverseArrayInPlace}; //add all of your function names here that you need for the node mocha tests
+    findLongestWord:findLongestWord,reverseArray:reverseArray ,reverseArrayInPlace:reverseArrayInPlace
+  ,scoreExams:scoreExams,generateArray:generateArray}; //add all of your function names here that you need for the node mocha tests
 
 /**
 //  
@@ -77,17 +78,64 @@ function reverseArray(arr) {
     }
     return newArray;
 }
+
+ /**
+ * 
+ * @param {array} arr The array of numbers; 
+ * @returns  {array} arr returns the reversed array;
+ */
+function reverseArrayInPlace( arr1 ){
+
+  let newArray= arr1.splice(0);
+  
+  for (let i =  newArray.length-1; i >= 0; i--) {
+    arr1.push (newArray[i]); 
+  }
+
+  return arr1;
+}
+//
+
+/************************************************************** */
 /**
  * 
- * @param {array} arr - array of elements 
- * @returns {array} - original array reversed
+ * @param {array} studentAnswers - multidimensional array of students' answers
+ * @param {array} correctAnswers - array of correct answers
+ * @returns {array} - array of correct answers for each student
  */
- function reverseArrayInPlace(arr) {
-    let newArray = [];
-    for (let element of arr) {
-        newArray.unshift(element);
-    }
-    arr = newArray;
-    return arr;
-}
+ function scoreExams(studentAnswers, correctAnswers) {
+  let scoreArray = [];
+  let studentScore = 0;
 
+  for (let array of studentAnswers) {
+      for (let i = 0; i < array.length; i++) {
+          if (array[i] === correctAnswers[i]) {
+              studentScore += 1;
+          }
+      }
+      scoreArray.push(studentScore);
+      studentScore = 0;
+  }
+  return scoreArray;
+}
+//
+/**
+ * 
+ * @param {int} num1 - first number 
+ * @param {int} num2 - second number 
+ * @returns {array} - multidimensional array
+ */
+ function generateArray(num1, num2) {
+  let newArray = [];
+  let count = 1;
+  for (let i = 1; i <= num1; i++) {
+      newArray.push([]);
+  }
+  for (let j = 0; j < newArray.length; j++) {
+      for (let k = 0; k < num2; k++) {
+          newArray[j].push(count);
+          count += 1;
+      }
+  }
+  return newArray;
+}

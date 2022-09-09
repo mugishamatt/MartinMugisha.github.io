@@ -9,7 +9,9 @@ const maxOfThree = myExports.maxOfThree;  //do this for all of the functions use
 const sum = myExports.sum;
 const findLongestWord=myExports.findLongestWord;
 const reverseArray=myExports.reverseArray;
-const reverseArrayInPlace=myExports.reverseArray;
+const reverseArrayInPlace=myExports.reverseArrayInPlace;
+const scoreExams=myExports.scoreExams
+const generateArray=myExports.generateArray
 
 /* global assert maxOfThree sum multiply findLongestWord reverseArray reverseArrayInPlace scoreExams generateArray */
 
@@ -120,32 +122,32 @@ describe("reverseArray", function () {
 // scoreExams(studentAnswers, correctAnswers)); --> [2, 2, 2]
 // */
 
-// describe("score exam", function () {
-//     const studentAnswers = [[1, 1, 2,4], [2, 1, 2,2], [3, 1, 3,4]];
-//     const correctAnswers = [3, 1, 2,4];
-//     it("exam with 3 students", function () {
-//         assert.deepEqual(scoreExams(studentAnswers, correctAnswers), [3,2,3]);
-//     });
-//     it("exam with 3 students: one student has all incorrect answers", function () {
-//         assert.deepEqual(scoreExams( [[1, 1, 2,4], [2, 1, 2,2], [1,2, 3,1]], correctAnswers), [3,2,0]);
-//     });
-//     it("exam with 3 students: one student has all correct answers", function () {
-//         assert.deepEqual(scoreExams( [[1, 1, 2,4], [2, 1, 2,2],[3, 1, 2,4]], correctAnswers), [3,2,4]);
-//     });
-// });
+describe("score exam", function () {
+    const studentAnswers = [[1, 1, 2,4], [2, 1, 2,2], [3, 1, 3,4]];
+    const correctAnswers = [3, 1, 2,4];
+    it("exam with 3 students", function () {
+        assert.deepEqual(scoreExams(studentAnswers, correctAnswers), [3,2,3]);
+    });
+    it("exam with 3 students: one student has all incorrect answers", function () {
+        assert.deepEqual(scoreExams( [[1, 1, 2,4], [2, 1, 2,2], [1,2, 3,1]], correctAnswers), [3,2,0]);
+    });
+    it("exam with 3 students: one student has all correct answers", function () {
+        assert.deepEqual(scoreExams( [[1, 1, 2,4], [2, 1, 2,2],[3, 1, 2,4]], correctAnswers), [3,2,4]);
+    });
+});
 
 // /* 6. Write a function that takes two integers as inputs and returns a 2-dimensional array containing sequential numbers across each row as follows: */
-// describe("generate array", function () {
-//     const expected33 = [ [1, 2, 3], [4, 5, 6], [7, 8, 9]];
-//     const expected23 = [ [1, 2, 3], [4, 5, 6]];
-//     const expected21 = [ [1], [2]];
-//     it("expected33", function () {
-//         assert.deepEqual(generateArray(3,3), expected33);
-//     });
-//     it("expected23", function () {
-//         assert.deepEqual(generateArray(2,3), expected23);
-//     });
-//     it("expected21", function () {
-//         assert.deepEqual(generateArray(2, 1), expected21);
-//     });
-// });
+describe("generate array", function () {
+    const expected33 = [ [1, 2, 3], [4, 5, 6], [7, 8, 9]];
+    const expected23 = [ [1, 2, 3], [4, 5, 6]];
+    const expected21 = [ [1], [2]];
+    it("expected33", function () {
+        assert.deepEqual(generateArray(3,3), expected33);
+    });
+    it("expected23", function () {
+        assert.deepEqual(generateArray(2,3), expected23);
+    });
+    it("expected21", function () {
+        assert.deepEqual(generateArray(2, 1), expected21);
+    });
+});
