@@ -59,13 +59,13 @@ function createBook(title,author,libraryID) {
     
    
     
-    title = document.getElementById("title").value; //retrieves the book title from the title textbox
-  author = document.getElementById("author").value;
-  libraryID = document.getElementById("libids").value;
+//     title = document.getElementById("title").value; //retrieves the book title from the title textbox
+//   author = document.getElementById("author").value;
+//   libraryID = document.getElementById("libids").value;
     
-    console.log("title is: ", title.value);
+//     console.log("title is: ", title.value);
 
-    alert("title:  " + title.value);
+//     alert("title:  " + title.value);
 
     const newID = library.length + 5000;  // hack to get a unique id for now
     
