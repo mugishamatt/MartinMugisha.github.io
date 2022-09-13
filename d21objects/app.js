@@ -1,6 +1,6 @@
 "use strict";
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = { findTitles, findAuthors, findIDs,createBook }; //add all of your function names here that you need for the node mocha tests
+//module.exports = { findTitles, findAuthors, findIDs,createBook }; //add all of your function names here that you need for the node mocha tests
 
 /*
 o	createBook, which will take title, author, and libraryID as inputs.  It will create a new book object and add it to the library, 
@@ -57,15 +57,15 @@ function findTitles() {
  */
 function createBook(title,author) {
     
-//     const title = document.getElementById("title"); //retrieves the book title from the title textbox
+   
     
-//     title = document.getElementById("title").value; //retrieves the book title from the title textbox
-//     author = document.getElementById("author").value;
-//    libraryID = document.getElementById("libids").value;
+    title = document.getElementById("title").value; //retrieves the book title from the title textbox
+    author = document.getElementById("author").value;
+   libraryID = document.getElementById("libids").value;
     
-//     console.log("title is: ", title.value);
+    console.log("title is: ", title.value);
 
-//     alert("title:  " + title.value);
+    alert("title:  " + title.value);
 
     const newID = library.length + 5000;  // hack to get a unique id for now
     
