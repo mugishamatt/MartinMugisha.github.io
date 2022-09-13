@@ -151,5 +151,6 @@ return ids;
     for (let element of library) {
         titles.push(element.title);
     }
+    return titles;
 }
 
