@@ -33,7 +33,7 @@ bank.debit = function (id, amount) {
 //IMPLEMENT THIS
 
 if (this.getBalance(id) > amount) {
-    //customerData.customerTransactions.pus(-(amount));
+   
     this.saveTransaction(id, -amount);
 }
 
