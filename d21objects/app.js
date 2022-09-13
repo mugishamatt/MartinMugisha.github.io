@@ -59,9 +59,9 @@ function createBook(title,author,libraryID) {
     
    
     
-title = document.getElementById("title").value; //retrieves the book title from the title textbox
-  author = document.getElementById("author").value;
-  libraryID = document.getElementById("libids").value;
+// title = document.getElementById("title").value; //retrieves the book title from the title textbox
+//   author = document.getElementById("author").value;
+//   libraryID = document.getElementById("libids").value;
     
 //     console.log("title is: ", title.value);
 
