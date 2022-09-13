@@ -59,9 +59,9 @@ function createBook(title,author,libraryID) {
     
    
     
-//     title = document.getElementById("title").value; //retrieves the book title from the title textbox
-//   author = document.getElementById("author").value;
-//   libraryID = document.getElementById("libids").value;
+title = document.getElementById("title").value; //retrieves the book title from the title textbox
+  author = document.getElementById("author").value;
+  libraryID = document.getElementById("libids").value;
     
 //     console.log("title is: ", title.value);
 
@@ -76,7 +76,23 @@ function createBook(title,author,libraryID) {
     library.push(newBook);
     return newBook;
 }
+/**
+ * Event handler to display library titles sorted alphabetically
+ * @returns {undefined}
+ */
+ function showAuthors() {
 
+    /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
+
+    const authors = findAuthors();
+
+    /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
+    authors.sort();
+    const authorsString = authors.join("\n");
+
+    let textArea = document.getElementById("displayArea");
+    textArea.innerHTML = authorsString;
+}
 /**
  * 
  * @returns {Array} find all  authors in libraryBooks and return them in alphabetically ordered array.
@@ -93,6 +109,24 @@ authors.sort();
 return authors;
 }
 
+
+
+function showIDs() {
+
+    /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
+
+    const libraryID = findIDs();
+
+    /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
+
+    libraryID.sort((a, b) => a - b);
+    let libraryidString = libraryID.join("\n");
+    // const authorsString = authors.join("\n");
+
+    let textArea = document.getElementById("displayArea");
+    textArea.innerHTML = libraryidString;
+}
+
 /**
  * 
  * @returns {Array} find all the libraryIDs in libraryBooks and return them in an alphabetically ordered array.
@@ -107,5 +141,15 @@ for(let element of library){
 ids.sort();
 return ids;
 }
+//
 
+/**
+ * @return {string} - all title with the wors sorted by length
+ */
+ function scramble() {
+    let titles = [];
+    for (let element of library) {
+        titles.push(element.title);
+    }
+}
 
