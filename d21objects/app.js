@@ -145,10 +145,15 @@ return ids;
  * @return {string} - all title with the wors sorted by length
  */
  function scramble() {
-    let titles = [];
-    for (let element of library) {
-        titles.push(element.title);
-    }
-    return titles;
+
+
+    const titles = findTitles();
+
+    const titleString = titles.join(" ").toString().split(" ").sort((aaa,bbb) => (aaa.length > bbb.length)? 1 : -1).join("\n");
+
+    let textArea = document.getElementById("displayArea"); 
+    textArea.innerHTML = titleString;
 }
+Footer
+
 
