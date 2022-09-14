@@ -59,8 +59,8 @@ const string=str.toLowerCase();
  * @returns {num} - the value of money in number and without the dollar sign
  */
  function extractCurrencyValue(money) {
-    const moneyValue = money.slice(1);
-    return parseInt(moneyValue);
+    const moneyVal = money.slice(1);
+    return parseInt(moneyVal);
   }
   
   
@@ -95,11 +95,11 @@ const string=str.toLowerCase();
     if (str === "") {
       return "";
     } else if (str.includes("-")) {
-      let strArr = str.split("-");
-      let newStr = strArr[0];
-      for (let i = 1; i < strArr.length; i++) {
-        let newWord = strArr[i].slice(1);
-        newStr = newStr + (strArr[i][0].toUpperCase() + newWord);
+      let strArray = str.split("-");
+      let newStr = strArray[0];
+      for (let i = 1; i < strArray.length; i++) {
+        let newWord = strArray[i].slice(1);
+        newStr = newStr + (strArray[i][0].toUpperCase() + newWord);
       }
       return newStr;
   
