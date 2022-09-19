@@ -9,6 +9,13 @@
 // const filterOver10 = myExports.filterOver10;
 // const findEvenNum = myExports.findEvenNum;
 // const findEvenAge = myExports.findEvenAge;  
+// const includesEvenAge = myExports.includesEvenAge;
+// const findSum = myExports.findSum;
+// const findAverage = myExports.findAverage;
+// const findMax = myExports.findMax;
+// const findMaxAges = myExports.findMaxAges;
+// const findAverageEven = myExports.findAverageEven;
+// const findAverageOdd = myExports.findAverageOdd;
 
 
 let numArray;
@@ -65,10 +72,35 @@ describe("filter practice", function () {
         assert.strictEqual(numArray.includes(77), true);
         assert.strictEqual(numArray.includes(15), false);
     });
-    // it("includes even age -- write this test", function () {
-    //     assert.strictEqual(includesEvenAge(peopleArray), true);
-    //     const peopleOddAge = [{ name: "Sam", age: 15 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 81 }];
-    //     assert.deepEqual(includesEvenAge(peopleOddAge), false)
+    it("includes even age -- write this test", function () {
+        assert.strictEqual(includesEvenAge(peopleArray), true);
+        const peopleOddAge = [{ name: "Sam", age: 15 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 81 }];
+        assert.deepEqual(includesEvenAge(peopleOddAge), false)
 
 });
+});
 
+describe("reduce Practice", function () {
+    beforeEach(function () {
+        numArray = [5, 0, 7, 77, -20, 300, 51, 2];
+        peopleArray = [{ name: "Sam", age: 15 }, { name: "William", age: 6 }, { name: "Lucy", age: 13 }, { name: "Barney", age: 80 }];
+    });
+    it("find sum of numbers", function () {
+        assert.strictEqual(findSum(numArray), 422);
+    });
+    it("find average of numbers", function () {
+        assert.strictEqual(findAverage(numArray), 52.75);
+    });
+    it("find max of numbers", function () {
+        assert.strictEqual(findMax(numArray), 300);
+    });
+    it("find max of ages", function () {
+        assert.deepEqual(findMaxAges(peopleArray), { name: "Barney", age: 80 });
+    });
+    it("find average of even ages", function () {
+        assert.strictEqual(findAverageEven(peopleArray), 43);
+    });
+    it("find average of odd ages", function () {
+        assert.strictEqual(findAverageOdd(peopleArray), 14);
+    });
+});

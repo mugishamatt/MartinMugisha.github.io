@@ -7,7 +7,6 @@ module.exports = { doubleNums, doubleAges, filterEven, filterOver10, findEvenNum
 function doubleNums(arr) {
     return arr.map(num => num * 2);
 }
-
 function doubleAges(arr) {
     const newArr = arr.map(item => {
         let newObject = {
