@@ -59,6 +59,13 @@ const personTwo={
 
 }
 
+// function forIn(){
+// for(let elem in personOne){
+//     console.log("elem",elem)
+// }
+// }
+// forIn()
+
 
 const{name,age,address,sport="foot",address:{city}, ...restElem}=personTwo;
 console.log(name);

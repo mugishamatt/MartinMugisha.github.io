@@ -12,7 +12,6 @@ function assignment({ name, years, isAdmin = false }) {
 
   return `${name}+${years}+${isAdmin}`;
 }
-
 function topSalary(obj) {
   let highSalaryArr = [0, 0];
   if (Object.entries(obj).length > 0) {
@@ -26,11 +25,10 @@ function topSalary(obj) {
     return null;
   }
 }
-
-
 function cloneObject(obj) {
   let jsonObject = JSON.stringify(obj);
   let newObject = JSON.parse(jsonObject);
   console.log(newObject);
   return newObject === obj;
 }
+//
