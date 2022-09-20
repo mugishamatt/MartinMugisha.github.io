@@ -15,8 +15,6 @@ function assignment({ name, years, isAdmin = false }) {
   return `${name}+${years}+${isAdmin}`;
 }
 
-
-
 function topSalary(obj) {
   let highSalArr = [0, 0];
   if (Object.entries(obj).length > 0) {
