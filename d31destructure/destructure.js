@@ -8,22 +8,20 @@ let salaries = {
   "Pete": 300,
   "Mary": 250
 };
-function assignment({ name, years, isAdmin = false }) {
-  // console.log(name);
-  // console.log(years);
-  // console.log(isAdmin);
-  return `${name}+${years}+${isAdmin}`;
-}
+// function assignment({ name, years, isAdmin = false }) {
+
+//   return `${name}+${years}+${isAdmin}`;
+// }
 
 function topSalary(obj) {
-  let highSalArr = [0, 0];
+  let highSalaryArr = [0, 0];
   if (Object.entries(obj).length > 0) {
     for (let [key, value] of Object.entries(obj)) {
-      if ([value] > highSalArr[1]) {
-        highSalArr = [key, value];
+      if ([value] > highSalaryArr[1]) {
+        highSalaryArr = [key, value];
       }
     }
-    return highSalArr[0];
+    return highSalaryArr[0];
   } else {
     return null;
   }
