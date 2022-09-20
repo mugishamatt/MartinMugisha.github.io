@@ -24,8 +24,8 @@ P.S. Use Object.entries and destructuring to iterate over key/value pairs.
 describe("topSalary", function () {
   it("returns top-paid person", function () {
     let salaries = {
-      "John": 100,
-      "Pete": 300,
+      "matt": 100,
+      "Pete": 330,
       "Mary": 250
     };
 
@@ -41,17 +41,17 @@ describe("topSalary", function () {
 describe("destructuring assignment", function () {
   it("returns destructured object into variables", function () {
     let user = {
-      name: "John",
-      years: 30
+      name: "matt",
+      years: 33
     };
-    assert.equal(assignment(user), "John+30+false");
+    assert.equal(assignment(user), "matt+33+false");
   });
 });
 
 describe("clones object using JSON", function () {
   it("checks strict equality of given object and clone object", function () {
     let user = {
-      name: "John Smith",
+      name: "matt Smith",
       age: 35
     };
     assert.equal(cloneObject(user), false);
