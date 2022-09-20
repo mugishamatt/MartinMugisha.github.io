@@ -8,10 +8,10 @@ let salaries = {
   "Pete": 300,
   "Mary": 250
 };
-// function assignment({ name, years, isAdmin = false }) {
+function assignment({ name, years, isAdmin = false }) {
 
-//   return `${name}+${years}+${isAdmin}`;
-// }
+  return `${name}+${years}+${isAdmin}`;
+}
 
 function topSalary(obj) {
   let highSalaryArr = [0, 0];
