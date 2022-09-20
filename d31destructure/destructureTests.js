@@ -38,16 +38,6 @@ describe("topSalary", function () {
   });
 });
 
-describe("destructuring assignment", function () {
-  it("returns destructured object into variables", function () {
-    let user = {
-      name: "John",
-      years: 30
-    };
-    assert.equal(assignment(user), "John+30+false");
-  });
-});
-
 describe("clones object using JSON", function () {
   it("checks strict equality of given object and clone object", function () {
     let user = {
