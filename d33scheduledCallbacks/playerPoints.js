@@ -37,8 +37,8 @@ function findTotalScores(teamStatisticsArr) {
 //         total+=game.points;
 //     }
 //     return total;
-
 // }
+
 function findTotalPlayerPoints(player) {
     return player.stats.reduce((total,curPoints)=>{
        return total+=curPoints.points;
