@@ -14,16 +14,21 @@ const player3 = { jersey: 6, stats: [{ game: 1, points: 10 }, { game: 2, points:
 const teamStats = [player1, player2, player3];
 
 
+// function findTotalScores(teamStatisticsArr) {
+
+//     let totalScores=[];
+
+//     for(let player of teamStatisticsArr){
+//         totalScores.push({jersey:player.jersey,total:findTotalPlayerPoints(player)})
+//     }
+//     return totalScores;
+// }
+
 function findTotalScores(teamStatisticsArr) {
+    return teamStatisticsArr.map(player=>{
+        return {jersey:player.jersey,total:findTotalPlayerPoints(player)}})
 
-    let totalScores=[];
-
-    for(let player of teamStatisticsArr){
-        totalScores.push({jersey:player.jersey,total:findTotalPlayerPoints(player)})
-    }
-    return totalScores;
 }
-
 
 
 // function findTotalPlayerPoints(player) {
