@@ -4,8 +4,6 @@
 */
 module.exports = {copyArray, concat, findMin, combineObjs }; //add all of your function names here that you need for the node mocha tests
 
-
-
 function copyArray(arr){
     
     return [...arr];
@@ -13,7 +11,6 @@ function copyArray(arr){
 
 function concat(arr1, arr2){
     return [...arr1, ...arr2];
-
 }
 
 function findMin(...numbers) {
