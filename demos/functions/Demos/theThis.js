@@ -1,4 +1,4 @@
- "use strict"
+ //"use strict"
 
 function foo() {
      console.log(this); 
@@ -14,12 +14,12 @@ function foo() {
     // bob.log();//log() is called by the object, bob
     
 
-    function Video(title){
+    // function Video(title){
 
-        this.title=title;
-        console.log(title)
-    }
-    const newVid=new Video('b') // this refer to new {}
+    //     this.title=title;
+    //     console.log(title)
+    // }
+    // const newVid=new Video('b') // this refer to new {}
 
     //console.log(newVid)
 
@@ -34,4 +34,88 @@ function foo() {
         }
 
     }
-    user.showTag()
+
+    // using bind
+
+
+
+let user1 = { 
+    firstName: "John"
+};
+function func(phrase) {
+console.log(phrase + ', ' + this.firstName); 
+}
+
+//
+const bindUser=func.bind(user1);
+
+bindUser("hello")
+
+
+   // user.showTag()
+
+
+/*
+let group = {
+    title: "Our Group",
+    students: ["John", "Pete", "Alice"],
+    showList() {
+    this.students.forEach(function(student) {
+    // Error: Cannot read property 'title' of undefined
+    console.log(this.title + ': ' + student)
+    });
+    }
+   };
+*/
+
+
+
+
+   // fix using bind.
+
+
+// let group1 = {
+//     title: "Our Group",
+//     students: ["John", "Pete", "Alice"],
+//     showList() {
+//     this.students.forEach(function(student) {
+//     // Error: Cannot read property 'title' of undefined
+//     console.log(this.title + ': ' + student)
+//     }.bind(this));
+//     }
+//    };
+//    group1.showList();
+
+//    //
+//    let group2 = {
+//     title: "Our Group",
+//     students: ["John", "Pete", "Alice"],
+//     showList() {
+//         function grouping(student){
+//             console.log(this.title + ': ' + student)
+//         }
+//     this.students.forEach((student) =>{
+//         grouping.bind(group2,student)()
+//     }
+//         );
+//     }
+//    };
+//    group2.showList();
+
+
+
+function playVideo(a,b){
+    console.log(this)
+}
+playVideo.call({name:"matt"},1,2)
+
+playVideo.apply({name:"mett"},[1,2])
+const vid =playVideo.bind({name:"rob"},1,3);
+vid()
+//playVideo.bind({name:"rob"},1,3)())
+playVideo()
+
+
+//
+// const bar= foo.bind(car);/// put in arrow function
+// const bar1=()=>car.foo();
