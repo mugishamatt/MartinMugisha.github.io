@@ -18,29 +18,29 @@ class Bank {
         this._accounts = [];
     }
     addAccount() {
-        let accNum = Bank.nextNumber;
-        let newAccount = new Account(accNum);
+        let accNumb = Bank.nextNum;
+        let newAccount = new Account(accNumb);
         this._accounts.push(newAccount)
-        Bank.nextNumber++;
-        return accNum;
+        Bank.nextNum++;
+        return accNumb;
 
 
     }
     addSavingsAccount(interest) {
-        let accNum = Bank.nextNumber;
-        let newSavings = new SavingsAccount(accNum, interest);
+        let accNumb = Bank.nextNum;
+        let newSavings = new SavingsAccount(accNumb, interest);
         this._accounts.push(newSavings);
-        Bank.nextNumber++;
-        return accNum;
+        Bank.nextNum++;
+        return accNumb;
     }
     addCheckingAccount(overdraft) {
-        let accNum = Bank.nextNumber;
-        let newChecking = new CheckingAccount(accNum, overdraft);
+        let accNumb = Bank.nextNum;
+        let newChecking = new CheckingAccount(accNumb, overdraft);
         this._accounts.push(newChecking);
-        Bank.nextNumber++;
-        return accNum;
+        Bank.nextNum++;
+        return accNumb;
     }
-    static nextNumber = 1;
+    static nextNum = 1;
     closeAccount(number) {
         const remAccount = this._accounts.find(account => account.getNumber() === number)
         const accountIndex = this._accounts.indexOf(remAccount);
