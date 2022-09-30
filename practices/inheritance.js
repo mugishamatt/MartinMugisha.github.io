@@ -35,6 +35,10 @@ let animal = {
   rabbit.__proto__=animal;
   // walk is taken from the prototype
   rabbit.walk(); // Animal walk
+ 
+  console.log(animal.isPrototypeOf(rabbit))//false
+
+
 
   console.log("***************************************************** *")
 
@@ -53,7 +57,6 @@ let animal = {
     },
 }
 
-  
   let admin = {
     __proto__: user,
     isAdmin: true

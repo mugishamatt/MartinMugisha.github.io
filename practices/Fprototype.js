@@ -8,15 +8,13 @@ let animal = {
 
  Rabbit.prototype=animal;
 
-  Rabbit.prototype.greet=function(){
-    console.log("hello")
+  Rabbit.prototype.walk=function(){
+    console.log("jumps")
   }
-
   let rabbit=new Rabbit("test")
-  
   console.log(Rabbit.prototype)
   console.log(rabbit.eats)
-  rabbit.greet();
+  rabbit.walk();
   
   console.log(Rabbit.prototype.isPrototypeOf(rabbit))//true
   console.log(Rabbit.isPrototypeOf(rabbit))//false
