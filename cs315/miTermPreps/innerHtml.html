@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function displayElem(){
+        let lists=document.getElementById("myList").innerHTML
+      
+        document.getElementById("demo").innerHTML=lists;
+
+     document.getElementById("myIp").innerHTML="";
+    
+        }
+        </script>
+</head>
+
+<body>
+   
+    
+    <h2>lists</h2>
+    <div id="demo"></div>
+    <ul id="myList">
+        <li>coffe</li>
+        <li>water</li>
+    </ul>
+
+    <p id="myIp"> hello</p>
+
+    <label >userName</label>
+    <!-- <input type="Button" onclick="displayElem()" value="click"> -->
+    <button onClick="displayElem()">clickme</button>
+  
+</body>
+</html>

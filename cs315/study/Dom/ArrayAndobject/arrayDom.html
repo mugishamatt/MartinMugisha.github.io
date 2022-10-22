@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload=function(){
+        let names=['mat','lolo','bobo','pepe']
+        let label=document.createElement('label')
+        document.body.appendChild(label)
+        label.innerHTML="listNames"
+    for(let name of names){
+        let checkbox1=document.createElement("input")
+      document.body.append(checkbox1)
+      checkbox1.setAttribute("type","checkBox")
+      checkbox1.value=name;
+     
+      let labelNames=document.createElement('label')
+      document.body.append(labelNames)
+      labelNames.innerHTML=name;
+    }
+    
+}
+
+</script>
+<body>
+  
+</body>
+</html>

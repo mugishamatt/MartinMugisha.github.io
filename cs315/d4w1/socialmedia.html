@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 35% 30% auto;
+            margin-top: 40px;
+            padding: 30px;
+            gap :10px;
+            border: 5px solid white;
+        }
+        h2{
+            color: white;
+        }
+        p{
+            color: white;
+        }
+        .tweets{
+            display: flex;
+            gap:10px;
+        }
+
+        .img1{
+            width: 20px;
+            height: 40px;
+        }
+        .img2{
+            width: 20px;
+            height: 40px;
+        }
+        .img3{
+            width: 20px;
+            height: 40px;
+        }
+        .photo-container{
+            display: grid;
+            grid-template-rows: auto auto;
+
+        }
+        .photodiv1{
+            display: flex;
+        }
+        .photodiv2{
+            display: flex;
+        }
+        .photo{
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body style="background-color:black ;">
+    
+    <div class="grid-container">
+        <div class="about">
+    <h2>About us</h2>
+   <P > Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sapiente quasi magni, adipisci quam vel aliquam non qui fuga, tempora voluptate praesentium? Placeat quam quos dolorem neque
+     mollitia quibusdam libero.
+     </p>
+     </div>
+     <!-- tweeter -->
+        <div class="tweeter">
+            <h2>latest tweets</h2>
+            <div class="tweet">
+                <div class="tweets">
+                    <img class="img1"src="images/tweet.png" >
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet nulla beatae hic architecto perspiciatis delectus velit, eligendi molestiae
+              repellat cupiditate error corrupti
+             !
+              </p>
+            </div>
+                <!-- t22 -->
+                <div class="tweets">
+                    <img class="img2" src="images/tweet.png" >
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet nulla beatae hic architecto perspiciatis delectus velit, eligendi molestiae
+              repellat cupiditate error corrupti
+            
+              </p>
+                </div>
+                <div class="tweets">
+                    <img  class="img3" src="images/tweet.png" >
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet nulla beatae hic architecto perspiciatis delectus velit, eligendi molestiae
+              repellat cupiditate error corrupti
+             
+              </p>
+                </div>
+            </div>
+        </div>
+        <!-- instagram -->
+        <div class="instagram">
+            <h2>instagram</h2>
+            <div class="photo-container">
+                <div class="photodiv1">
+            <div>
+                <img class="photo" src="images/image1.jpeg" alt="">
+            </div>
+            <div>
+                <img class="photo"  src="images/image2.jpeg" alt="">
+            </div>
+        </div>
+        <div class="photodiv2" >
+
+            <div>
+                <img class="photo" src="images/image3.jpeg" alt="">
+            </div>
+            <div>
+                <img class="photo" src="images/image4.jpeg" alt="">
+            </div>
+        </div>
+        </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active.input {
+            border: 1px solid red;
+            position: relative;
+        }
+        .invalid {
+            display: none;
+            color: red;
+        }
+        .options {
+            display: none;
+        }
+        th {
+            background-color: green;
+            color: white;
+        }
+        a {
+            color: inherit;
+        }
+        span {
+            position: relative;
+            padding-left: 8px;
+        }
+        label:after {
+            content: '*';
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+            height: 2px;
+            width: 2px;
+        }
+        .active.input + label:after {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <div>Sites</div>
+
+        <span>
+            <input name="sitename" id="sitename" class="sitename input" type="text" placeholder="Enter site name" />
+            <label for="sitename" class="invalid invalid1">Please Enter site name</label>
+        </span>
+
+        <span>
+            <input name="address" id="address" class="address input" type="text" placeholder="Enter Address" />
+            <label for="address" class="invalid invalid2">Please Enter Address</label>
+        </span>
+
+        <span>
+            <input name="keywords" id="keywords" class="keywords input" type="text" placeholder="Enter Keywords" />
+            <label for="keywords" class="invalid invalid3">Please Enter Keywords</label>
+        </span>
+
+
+        <button id="button">Add</button>
+    </div>
+    <div class="options">
+        add to <input type="checkbox" name="table" checked id="select-table"> Table
+        <input type="checkbox" name="list" checked id="select-list"> List
+
+        <div>
+            <div>List</div>
+            <ul class="list"></ul>
+        </div>
+        <div>
+            <div>Table</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="table-sitename">Site Name</th>
+                        <th id="table-keywords">Keywords</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+        <button id="removeSite">Remvoe Site</button>
+    </div>
+    
+    <script type="text/javascript">
+
+        let button = document.getElementById("button")
+        let ul = document.querySelector('ul')
+        let tbody = document.querySelector('tbody')
+        let asc = 1
+
+        const tableSiteName = document.getElementById("table-sitename")
+        tableSiteName.addEventListener('click', function(e) {
+            if (asc === 1) {
+                asc = 0
+            } else {
+                asc = 1
+            }
+            sortTable()
+        })
+        
+        button.addEventListener('click', function(e) {
+            add(e)
+        })
+
+        function add(e) {
+            let sitename = document.getElementById("sitename")
+            let keywords = document.getElementById("keywords")
+            let address = document.getElementById("address")
+
+            if (!sitename.value) {
+                document.querySelector('.sitename').classList.add('active')
+                document.querySelector('.invalid1').style.display = 'inline-block'
+                return;
+            } else if (!address.value) {
+                document.querySelector('.address').classList.add('active')
+                document.querySelector('.invalid2').style.display = 'inline-block'
+                return;
+            } else if (!keywords.value) {
+                document.querySelector('.keywords').classList.add('active')
+                document.querySelector('.invalid3').style.display = 'inline-block'
+                return;
+            }
+
+            hideError()
+            document.querySelector('.options').style.display = 'block'
+            document.getElementById("removeSite").removeEventListener('click', function() {})
+            document.getElementById("removeSite").addEventListener('click', function(e) {
+                console.log(" Here in remove")
+                let value = prompt('Enter sitename')
+
+                if (value) {
+                    removeAllMatchedRows(value)
+                }
+            })
+
+            let tableSelected = document.getElementById('select-table').checked
+            let listSelected = document.getElementById('select-list').checked
+
+            asc = 1
+            if (tableSelected && listSelected) {
+                addToList(keywords.value, address.value, sitename.value)
+                addToTable(keywords.value, address.value, sitename.value)
+
+                sortList()
+                sortTable()
+            } else if (listSelected) {
+                addToList(keywords.value, address.value, sitename.value)
+                sortList()
+            } else if (tableSelected) {
+                addToTable(keywords.value, address.value, sitename.value)
+                sortTable()
+            }
+            changeBackgroundColor()
+        }
+
+        function hideError() {
+            document.querySelector('.sitename').classList.remove('active')
+            document.querySelector('.invalid1').style.display = 'none'
+
+            document.querySelector('.address').classList.remove('active')
+            document.querySelector('.invalid2').style.display = 'none'
+
+            document.querySelector('.keywords').classList.remove('active')
+            document.querySelector('.invalid3').style.display = 'none'
+        }
+
+        function addToList(keywords, address, sitename) {
+            let li = document.createElement('li')
+            let anchor = document.createElement('a')
+            anchor.setAttribute('href', address)
+            anchor.innerHTML = sitename
+
+            let innerUl = document.createElement('ul')
+            
+            const keywordsSplit = keywords.split(',')
+
+            for (let i = 0; i < keywordsSplit.length; i++) {
+                let innerLi = document.createElement('li')
+                innerLi.innerHTML = keywordsSplit[i]
+                innerUl.append(innerLi)
+            }
+            li.append(anchor)
+            li.append(innerUl)
+            ul.append(li)
+        }
+
+        function addToTable(keywords, address, sitename) {
+
+            let tr = document.createElement('tr')
+            let td = document.createElement('td')
+
+            let anchor = document.createElement('a')
+            anchor.setAttribute('href', address)
+            anchor.innerHTML = sitename
+
+            td.append(anchor)
+
+            let td2 = document.createElement('td')
+            td2.innerHTML = keywords
+            td2.style.color
+
+            if (sitename.toLowerCase() === 'amazon') {
+                td.style.color = 'green'
+                td2.style.color = 'blue'
+            }
+
+            tr.append(td)
+            tr.append(td2)
+
+            tbody.append(tr)
+
+        }
+
+        function sortTable() {
+
+            let rows = document.querySelectorAll('tbody tr')
+            let data = []
+
+            rows.forEach(row => {
+                let tags = row.querySelectorAll("td")
+                let sitenameTag = tags[0].children
+                let keywords = tags[1].innerText
+
+                let anchor = sitenameTag[0]
+                let sitename = anchor.innerText
+                let address = anchor.getAttribute('href')
+                data.push({
+                    sitename,
+                    keywords,
+                    address
+                })
+            })
+
+            tbody.innerHTML = ''
+
+            data.sort((a, b) => {
+                if (asc === 1) {
+                    if (a.sitename < b.sitename) return -1
+                    else if (a.sitename > b.sitename) return 1
+                    return 0
+                } else {
+                    if (a.sitename > b.sitename) return -1
+                    else if (a.sitename < b.sitename) return 1
+                    return 0
+                }
+
+            }).forEach(item => {
+                addToTable(item.keywords, item.address, item.sitename)
+            })
+
+        }
+
+        function sortTable() {
+
+            let rows = document.querySelectorAll('tbody tr ')
+            let data = []
+
+            rows.forEach(row => {
+                let tags = row.querySelectorAll("td")
+                let sitenameTag = tags[0].children
+                let keywords = tags[1].innerText
+
+                let anchor = sitenameTag[0]
+                let sitename = anchor.innerText
+                let address = anchor.getAttribute('href')
+                data.push({
+                    sitename,
+                    keywords,
+                    address
+                })
+            })
+
+            tbody.innerHTML = ''
+
+            data.sort((a, b) => {
+                if (asc === 1) {
+                    if (a.sitename < b.sitename) return -1
+                    else if (a.sitename > b.sitename) return 1
+                    return 0
+                } else {
+                    if (a.sitename > b.sitename) return -1
+                    else if (a.sitename < b.sitename) return 1
+                    return 0
+                }
+
+            }).forEach(item => {
+                addToTable(item.keywords, item.address, item.sitename)
+            })
+
+        }
+
+        function sortList() {
+
+            let rows = document.querySelectorAll('.list > li')
+            let data = []
+
+            rows.forEach(row => {
+                let anchor = row.querySelector("a")
+                let sitename = anchor.innerText
+                let address = anchor.getAttribute('href')
+
+                let lis = row.querySelectorAll('li')
+                let keywords = ''
+                lis.forEach((item, index) => {
+                    keywords += item.innerText
+                    if (index !== lis.length - 1) {
+                        keywords += ","
+                    }
+                })
+
+                data.push({
+                    sitename,
+                    keywords,
+                    address
+                })
+            })
+
+            ul.innerHTML = ''
+
+            data.sort((a, b) => {
+                if (asc === 1) {
+                    if (a.sitename < b.sitename) return -1
+                    else if (a.sitename > b.sitename) return 1
+                    return 0
+                } else {
+                    if (a.sitename > b.sitename) return -1
+                    else if (a.sitename < b.sitename) return 1
+                    return 0
+                }
+
+            }).forEach(item => {
+                addToList(item.keywords, item.address, item.sitename)
+            })
+        }
+
+        function removeAllMatchedRows(value) {
+
+            let rows = document.querySelectorAll('tbody tr ')
+            let data = []
+
+            rows.forEach(row => {
+                let tags = row.querySelectorAll("td")
+                let sitenameTag = tags[0].children
+                let keywords = tags[1].innerText
+
+                let anchor = sitenameTag[0]
+                let sitename = anchor.innerText
+                let address = anchor.getAttribute('href')
+                data.push({
+                    sitename,
+                    keywords,
+                    address
+                })
+            })
+
+            tbody.innerHTML = ''
+
+            data.filter(item => item.sitename != value).forEach(item => {
+                addToTable(item.keywords, item.address, item.sitename)
+            })
+        }
+
+        function changeBackgroundColor() {
+            let rows = document.querySelectorAll('tbody tr ')
+
+            rows.forEach((row, index) => {
+                if (index < 3) {
+                    row.style.backgroundColor = 'blue'
+                }
+            })
+        }
+    </script>
+</body>
+</html>

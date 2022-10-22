@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//         window.onload=onloadHandler;
+// function onloadHandler(){
+        function showList(){
+
+            buildTheUl(arrayList)
+        }
+    
+        let arrayList = [{name:'rose',color:'pink'},
+        {name:'jasmine',color:'white'},
+        {name:'lily',color:'white'}];
+
+        function buildTheUl(arrayList){
+            let newUl=document.createElement('ul')
+            document.body.append(newUl)
+
+
+            for(let ele of arrayList){
+                let newLi=document.createElement("li")
+                newUl.appendChild(newLi)
+                newLi.innerHTML=ele.name+""+ele.color
+
+            }
+
+
+        }
+    
+    </script>
+</head>
+<body>
+
+    <button onclick="showList()">showlist</button>
+</body>
+</html>

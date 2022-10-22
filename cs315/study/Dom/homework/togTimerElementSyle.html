@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .redColor{
+   background-color: red;
+    }
+    .blueColor{
+        background-color: blue;
+    }
+    
+</style>
+<script>
+   window.onload=onloadHandler;
+   function changeColor(){
+
+    let color=document.querySelector('div')
+    if(color.classList.contains('redColor')){
+        color.classList.remove('redColor');
+        color.classList.add('blueColor');
+
+    }else{
+        color.classList.remove('blueColor');
+        color.classList.add('redColor');
+    }
+  // setInterval(changeColor,2000)
+       
+   }
+
+    function onloadHandler(){
+    let btn=document.querySelector('button')
+    btn.onclick=changeColor;
+
+
+
+    }
+
+</script>
+<body>
+   <button>changeColor</button> 
+   <div >color</div>
+</body>
+</html>

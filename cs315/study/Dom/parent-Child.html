@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    window.onload=function(){
+
+
+        // let ulL = document.querySelector(".fruitsClass");
+        //     console.log(ulL.children);
+
+        let ulL=document.querySelector("ul")
+
+      console.log(ulL.children)
+
+    //add another fruit
+    let fruits=ulL.children;
+    console.log(fruits)
+
+    let newli=document.createElement("li")
+    let loc=fruits[fruits.length-1]
+   loc.after(newli)
+   newli.innerHTML="orange";
+    //newli.outerHTML='<li id=orang>orange</li>'
+    console.log(fruits)
+    }
+</script>
+</head>
+<body>
+    <ul>
+      <li>grapess</li>
+      <li>hdhdhh</li>
+      <li>google</li>
+    </ul>
+</body>
+</html>

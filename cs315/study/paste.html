@@ -1,0 +1,92 @@
+window.onload=function(){
+    let tr=document.querySelectorAll(".myTable tr")
+    for( let ele of tr){
+     console.log(ele.children)
+    if(ele.value=="tr")
+     ele.outerHTML=" <ul><li>First Row Col 1</li></ul>"+
+     console.log(ele)
+    }
+ 
+     }
+ </script>
+ <body>
+     <table class="myTable">
+         <tr>
+         <td>First Row Col 1</td>
+         <td>First Row Col 2</td> 
+         </tr>
+         <tr>
+         <td>Second Row Col 1</td> 
+         <td>Second Row Col 2</td> </tr>
+         </table>
+ </body>
+ </html>
+
+ <!--  -->
+ window.onload = onloadHandler;
+ function toggleDisplay(){
+     let div = document.querySelector('div');
+     // div.style.display = div.style.display=='none'
+     // ?'block':'none';
+     if(div.style.display=='none'){
+         div.style.display='block'
+ 
+     }else{
+
+         div.style.display='none'
+       
+     }
+   
+ }
+ function onloadHandler(){
+     let intervalTime = setInterval(toggleDisplay,1000);
+     setTimeout(function(){
+
+
+         clearInterval(intervalTime)
+         let div=document.querySelector('div')
+         div.style.display='block'
+         
+     },5*1000)
+
+ }
+
+</script>
+<body>
+<div style="background-color: red">
+ Banner
+
+
+</div>
+</body>
+</html>
+window.onload=onloadHandler;
+   function changeColor(){
+
+    let color=document.querySelector('div')
+    if(color.classList.contains('redColor')){
+        color.classList.remove('redColor');
+        color.classList.add('blueColor');
+
+    }else{
+        color.classList.remove('blueColor');
+        color.classList.add('redColor');
+    }
+  // setInterval(changeColor,2000)
+       
+   }
+
+    function onloadHandler(){
+    let btn=document.querySelector('button')
+    btn.onclick=changeColor;
+
+
+
+    }
+
+</script>
+<body>
+   <button>changeColor</button> 
+   <div >color</div>
+</body>
+</html>

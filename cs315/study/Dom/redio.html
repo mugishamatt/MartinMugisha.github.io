@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script >
+    function addButton(){
+
+        let label=document.createElement('label')
+        let btn=document.querySelector('button')
+        btn.before(label)
+        label.outerHTML='<label for="color">green</label>'+
+        '<input type="radio" id="color"value="green"><br>'
+
+    }
+
+</script>
+<body>
+    <p id="color">color</p>
+    <label for="color">black</label>
+    <input type="radio" id="color"value="black"><br>
+    <label for="color">red</label>
+    <input type="radio" id="color"value="blue"><br>
+    <label for="color">blue</label>
+    <input type="radio" id="color"value="blue"><br>
+
+    <button  onclick="addButton()"> nadd button</button>
+</body>
+</html>

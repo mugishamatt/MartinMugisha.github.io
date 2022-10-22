@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload=onloadHandler;
+    let names=['mat','lolo','bobo','pepe'];
+function onloadHandler(){
+     makeList(names)
+     myFiltered(names)
+   // addElem(names)
+    
+}
+
+function makeList(names){
+
+    let newDiv=document.createElement("div")
+       newDiv.setAttribute("id","myDiv")
+       document.body.append(newDiv)
+       
+    for(let name of names){
+        let checkbox1=document.createElement("input")
+     newDiv.append(checkbox1)
+      checkbox1.setAttribute("type","checkBox")
+      checkbox1.value=name;
+      let labelNames=document.createElement('label')
+      newDiv.append(labelNames)
+      labelNames.innerHTML=name;
+    }
+
+}
+function sortedList(){
+    let sortedNames=names.sort();
+    document.getElementById('myDiv').remove()
+    makeList(sortedNames)
+}
+function myFiltered(){
+    let filtered=names.filter(name=>{
+        return name.length==4;
+    
+    })
+    document.getElementById('myDiv').remove();
+           makeList(filtered);
+}
+function addElem(){
+    let val=document.getElementById('myInput').value;
+    names.push(val)
+    document.getElementById('myDiv').remove();
+    makeList(names)   
+}
+
+</script>
+<body>
+  <button onclick="sortedList()"> sort</button>
+  <button onclick="myFiltered()"> filter</button>
+  <button onclick="addElem()">add</button>
+<input type="text" id="myInput">
+</body>
+</html>

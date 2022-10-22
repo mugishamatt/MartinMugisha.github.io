@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = onloadHandler;
+      function onloadHandler() {
+        let trs = document.querySelectorAll("tr");
+        document.body.append(myUl);
+        let myUl = document.createElement("ul");
+
+        for (let eachTr of trs) {
+          for (let eachTd of eachTr.children) {
+            let li = document.createElement('li');
+            li.innerHTML = eachTd.innerHTML;
+            myUl.append(li);
+          }
+          //myUl.append(li); //to first row and second row
+        }
+
+      
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="onloadHandler()">convert</button>
+    <table>
+      <tr>
+        <td>First Row Col 1</td>
+        <td>First Row Col 2</td>
+      </tr>
+      <tr>
+        <td>Second Row Col 1</td>
+        <td>Second Row Col 2</td>
+      </tr>
+    </table>
+  </body>
+</html>

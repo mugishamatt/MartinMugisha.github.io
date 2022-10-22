@@ -1,0 +1,32 @@
+.flexcontainer{
+     display: flex; 
+     flex-wrap: wrap; 
+     justify-content: center; 
+     align-items: center; 
+     align-content:center;  
+     background-color: blue;
+     flex-direction: row;
+}
+
+
+.divItem{
+    border: 5px solid gray;
+    margin: 20px;
+   width: 100px;
+    background-color: aquamarine;
+}
+.item1{
+    height: 40px; 
+  
+    
+}
+.item2{
+    height: 40px;
+}
+.item3{
+    height: 40px;
+}
+.item4{
+    height: 40px;
+  
+}

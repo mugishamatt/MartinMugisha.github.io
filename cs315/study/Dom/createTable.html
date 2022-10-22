@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+     
+        
+    </style>
+<script>
+    function addTable(){
+        let newTable= document.createElement("table")
+        newTable.setAttribute("id","myTable")
+        
+        
+        document.body.appendChild(newTable)
+        console.log(newTable)
+
+        let row=document.createElement("TR")
+        row.setAttribute("id","myTr")
+        document.getElementById("myTable").appendChild(row);
+
+        let col=document.createElement("TD")
+        let inputVal=document.getElementById("textName").value;
+       // console.log("val"+inputVal)
+        let nodeVal=document.createTextNode(inputVal)
+      
+        col.appendChild(nodeVal)
+        document.getElementById("myTr").appendChild(col);
+
+
+        let col2=document.createElement("TD")
+        let inputVal1=document.getElementById("textAge").value;
+
+        let cell=document.createTextNode(inputVal1)
+   
+        col2.appendChild(cell)
+        document.getElementById("myTr").appendChild(col2);
+        
+
+
+        // let val2=document.getElementById("textAge").value
+
+        // console.log("val"+""+val2)
+        // let cell=document.createTextNode(val)
+        // let cell1=document.createTextNode(val2)
+        // cell.appendChild(val)
+        // cell1.appendChild(val2)
+        // document.getElementById("myTr").appendChild(col);
+
+    }
+
+    </script>
+    <style>
+       table{
+        border: 5px solid black;
+      }
+      td{
+        
+      }
+      #textName{
+        margin-right: 10px;
+      }
+    </style>
+    
+</head>
+<body>
+    
+
+            <label >name</label>
+            <input type="text" id="textName">
+            <label >age</label>
+            <input type="text" id="textAge">
+            <input type="button" onclick="addTable()" value="add">
+            
+
+        
+    </table>
+
+    
+    
+</body>
+
+
+</html>

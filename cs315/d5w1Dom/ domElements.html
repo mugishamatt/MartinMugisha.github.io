@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function alertTheText() {
+        //Copy input from one to other
+        // console.log("here")
+        let ele = document.getElementById("userName");
+        console.log(ele);
+        let eleValue = ele.value;
+        let copy = document.getElementById("copy");
+        copy.value = eleValue;
+
+        // //<!-- 1. Change Text of Div,P,textInput,link
+        // change text content
+
+        const div = document.getElementById("myDIV");
+        div.innerHTML = "My NewText";
+        // change text of P
+        const p = document.querySelector("p");
+        p.innerHTML = "hello newText";
+        //outerClass
+        // const p1=document.getElementById("p2")
+        // p1.outerHTML="another newText"
+        //
+        //change inputext
+
+        // const xy=document.getElementById("userName");
+        // xy.value="pepe" //
+
+        //change link
+        const linkChange = document.getElementById("linker");
+        linkChange.setAttribute("href", "http://www.yahoo.com");
+        linkChange.innerHTML = "yahoo.com";
+        //change image
+        let myImage = document.getElementById("myImage");
+        myImage.setAttribute("src", "images/tweet.png");
+
+        // change inputText value
+        const textVal = document.getElementById("userName");
+        textVal.setAttribute("myAttr", "newVall");
+
+        // display element of textArea
+        let textArVal = document.getElementById("myTextarea").value;
+        document.getElementById("area").innerHTML = textArVal;
+
+        //change values of textArea
+
+        let valText = document.getElementById("myTextarea");
+        valText.value = "hello new text value";
+
+        //create aDIV
+  //      let x = document.createElement("DIV");
+  // let t = document.createTextNode("This is a div element.");
+  // x.setAttribute("style", "background-color: pink;");
+  // x.appendChild(t);
+  // document.body.appendChild(x);
+
+  //create element 
+         let newElem=document.createElement("input")
+           newElem.setAttribute("style","background-color: pink")
+          //  to put it on dom
+          document.body.appendChild(newElem)
+
+          //using innerHTML
+          const divEl=document.createElement("div")
+          divEl.innerHTML="hello div"
+          console.log(divEl)
+          
+
+          //8.text area
+          
+
+      }
+    </script>
+    <style>
+      label {
+      }
+    </style>
+  </head>
+
+  <body>
+    <img id="myImage" src="images/garden.jpeg" />
+
+    <a id="linker" href="http://www.google.com">google.com</a>
+
+    <div id="myDIV">My Text</div>
+    <p id="p1">helllo</p>
+    <p id="p2"></p>
+
+    <label>UserName</label>
+    <input type="text" id="userName" myAttr="myAttrValue" value="bobo" />
+    <br />
+
+    <label>Copy</label>
+
+    <input type="text" id="copy" />
+    <input type="button" onclick="alertTheText()" value="Submit" />
+    <div class="texAr" style="margin-top: 20px">
+        <!-- textArea -->
+      <textarea id="myTextarea">
+        342 Alvin Road
+        Ducksburg</textarea>
+      <p3 id="area"></p3>
+    </div>
+<!-- create and add div -->
+   <div id="mydiv">
+hello
+   </div>
+    
+   <textarea id="myTextareaBanana">
+    Banana</textarea>
+  <p3 id="area"></p3>
+</div>
+
+
+    
+
+    <!-- <input type="checkbox"/>
+    <input type="radio"/> -->
+  </body>
+</html>
+
+<!-- 1. Change Text of Div,P,textInput,link 
+2. Change the image,
+3. change the address of link
+3. Change the value of textInput,textArea
+4. Create and add Div,p,img,link, textInput,textArea,button,checkbox,radio 
+5. -->

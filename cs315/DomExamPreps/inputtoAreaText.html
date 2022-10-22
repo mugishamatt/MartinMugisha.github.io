@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+window.onload=function(){
+let divp=document.createElement('div')
+divp.innerHTML="Input";
+document.body.append(divp)
+let feild=document.createElement('input')
+feild.setAttribute('type',"text")
+feild.setAttribute('id',"text1")
+document.body.append(feild)
+// 
+let div2=document.createElement('div')
+div2.innerHTML="Input text";
+feild.after(div2)
+let divt=document.createElement('textarea')
+divt.setAttribute("type","text")
+divt.setAttribute("id","text2")
+div2.after(divt)
+
+let btn=document.querySelector('button')
+divt.after(btn)
+function move(){
+
+let input1Val=document.querySelector("input");
+console.log(input1Val)
+let input2Val=document.querySelector('textarea')
+console.log(input2Val)
+input2Val.value+=input1Val.value;
+input1Val.value=""
+
+
+}
+
+  }
+
+
+
+
+ 
+</script>
+<body>
+    <button onclick="move()">move</button>
+</body>
+</html>

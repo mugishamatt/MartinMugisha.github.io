@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Document Object</h1>
+<h2>The querySelector() Method</h2>
+
+<p>Add a background color to the first element with class="example":</p>
+
+<p class="example">I am a paragraph.</p>
+<p class="example">I am a paragraph.</p> 
+<p class="para">I am a paragraph.</p>
+<p class="para">I am a paragraph.</p> 
+
+<button onclick="changeColor()"> change color</button>
+
+</body>
+
+<script>
+function changeColor(){
+    //using QuerrySelector
+   document.querySelector(".example").style.color="red";
+    //using QuerrySelectorAll()
+  const nodeList= document.querySelectorAll(".para");
+
+//    for(let i = 0;i< nodeList.length;i++){
+//        nodeList[i].style.backgroundColor = "blue"
+//    }
+
+   for (let elem of nodeList){
+    elem.style.backgroundColor="pink"
+   }
+
+
+
+}
+</script>
+</html>

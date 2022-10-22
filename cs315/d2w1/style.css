@@ -1,0 +1,51 @@
+
+.divLeft{
+    float: left;
+    background-image: url(images/webdev.png );
+    
+}
+.divRight{
+    float: right;
+   padding: 10px;
+   background-color: blue;
+
+}
+label{
+    padding: 10px;
+    color: aqua;
+    border-radius: 10px;
+
+}
+.navBars{
+    margin: 10px;
+
+}
+.divNav{
+  overflow: auto; 
+  
+}
+.divOne{
+    width: 50%;
+
+}
+.divImage{
+    border: 10px;
+    color: rgb(0, 0, 0);
+
+}
+.image{
+float: left;
+padding-right: 10px;
+}
+.box{
+    border: 10px solid blue;
+    padding: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    /* height: 100px; */
+    margin-left: 20px;
+    margin-top: 200px;
+}
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function  textDisplay(){
+        let elem=document.getElementById("myArea")
+       let initial= document.getElementById("myP").innerHTML
+     document.getElementById("myP").innerHTML=initial+elem.value;
+     elem.value=""
+       }
+    </script>
+</head>
+
+<body>
+   
+    <textarea id="myArea" cols="30" rows="10">text</textarea>
+    <p id="myP"></p>
+    <input type="button" onclick="textDisplay()" value="submit">
+
+
+   
+</body>
+</html>

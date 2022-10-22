@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkClicked(){
+
+            let label = document.createElement("label");
+            let button = document.querySelector("button");
+           label.before(label)
+        label.outerHTML='<label for="accept">Accept</label>'+
+             '<input type="checkbox" id="accept" value="yes">'+
+
+              '<label for="denied">denied</label>'+
+              '<input type="checkbox" id="denied" value="no">';
+            
+            let elem=document.querySelector("#accept")
+             let elemVal;
+            if(elem.checked==true){
+               alert(elemVal= elem.value);
+            }else{
+               alert("not selected")
+            }
+           alert(elemVal) 
+        }
+
+        </script>
+</head>
+
+<body>
+    <!-- <label for="accept">Accept</label>
+    <input type="checkbox" id="accept" value="yes">
+
+    <label for="denied">denied</label>
+    <input type="checkbox" id="denied" value="no"> -->
+    
+    <button onclick="checkClicked()"> check</button>
+</body>
+
+</html>

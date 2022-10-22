@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+function getValue(){
+    let val=document.querySelectorAll('#fruits option')
+    let fruitsval;
+    let fruitsvalArr=[];
+    for(eachFruit of fruits){
+        fruitsvalArr.push(eachFruit.value)
+       //fruitsval= eachFruit.value
+       if(eachFruit.selected){
+        fruitsval=eachFruit.value;
+       }
+    }
+    console.log(fruitsvalArr)
+    console.log(fruitsval)
+
+}
+</script>
+<body>
+    <label for="">fruits</label>
+    <select name="" id="fruits">
+        <option value="apple">Apple</option>
+        <option value="mangue">mango</option>
+        <option value="orange">orange</option>
+    </select>
+
+    
+
+   <button onclick="getValue()"> getValue</button>
+</body>
+</html>

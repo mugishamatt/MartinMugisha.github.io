@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""><input type="radio" name="name">name
+    <input type="radio" name="radio1" value="email">email
+    <input type="radio" name="radio1" value="phone">phone
+    <input type="radio" name="radio1" value="age">age
+
+    <div id="myDiv"></div>
+    <button onclick="getValue()">submit</button>
+
+    <script>
+    function getValue(){
+        let radios=document.querySelectorAll("input[name='radio1']")
+       // console.log(radios)
+        let selectedValue;
+        for(let radio of radios){
+        
+            if(radio.checked==true){
+      
+                selectedValue=radio.value;
+                document.querySelector('div').innerHTML="you checked"+ selectedValue;
+            }
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.5fr ;
+       justify-content: center;
+        gap: 10px;
+   
+        border: 5px solid gray;
+        
+    }
+    .box{
+        border: 2px solid grey;
+        background-color: rgb(0, 255, 221);
+        padding: 10px;
+        text-align: center;
+
+    }
+    .topdiv{
+        display: grid; 
+        grid-template-columns: auto auto auto 50%;
+        /* justify-content: center;  */
+        gap: 10px;
+        
+    }
+    .divs{
+        background-color: antiquewhite;
+        padding: 5px;
+   
+
+    }
+    .lowdiv{
+        background-color: azure;
+        text-align: center;
+        margin-top: 30px;
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>First Article</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, incidunt tempora ad excepturi nihil aperiam sed suscipit corrupti mollitia velit vel consequuntur optio commodi distinctio 
+                vitae libero illo obcaecati nobis.</p>
+
+        </div>
+        <div class="box">
+            <h3>second Article</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, incidunt tempora ad excepturi nihil aperiam sed suscipit corrupti mollitia velit vel consequuntur optio commodi distinctio 
+                vitae libero illo obcaecati nobis.</p>
+
+        </div>
+        
+        <div class="box">
+        <div class="topdiv">
+
+            <div class="divs">smile</div>
+            <div class="divs">laught </div>
+            <div class="divs">walk</div>
+            <div class="divs">speaking</div>
+        </div>
+        <div class="lowdiv">flush</div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis obcaecati suscipit corporis repellat, consectetur at a. Fugit rem totam explicabo iure temporibus vitae corporis molestias tenetur sint ullam,
+             exercitationem vel.</p>
+    </div>
+    
+    </div>
+      
+       
+    </div>
+</body>
+</html>

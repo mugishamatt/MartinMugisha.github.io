@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+function swapped(){
+        let nameVal=document.getElementById("nameId");
+        let val=nameVal.value;
+        let aliasVal=document.getElementById("aliasId");
+         //copy
+         aliasVal.value=val;
+         //swap
+    //   let temp=nameVal.value
+    //  nameVal.value=aliasVal.value;
+    //  aliasVal.value=temp;
+
+//change image
+
+    let elem=document.getElementById("img1")
+    elem.setAttribute("src","images/image3.jpeg")
+
+    // change link
+
+let linkEl=document.getElementById("google")
+    linkEl.setAttribute("href","http://www.yahoo.com");
+    linkEl.innerHTML="yahoo.com";
+
+// change div
+let divElm=document.getElementById("div")
+
+divElm.innerHTML="newDiv"
+
+//create an Element
+let newEl=document.createElement("p")
+ newEl.innerHTML="my new paragraph"
+ document.getElementById("div").append(newEl)
+ document.getElementById("div").innerHTML
+
+ let newArea=document.createElement("TEXTAREA")
+ let texval=document.createTextNode("type here")
+ newArea.appendChild(texval)
+ document.body.appendChild(newArea)
+
+ document.getElementById("myInput").innerHTML
+}
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <div>
+    <label >name</label>
+    <input type="text" id="nameId" >
+</div>
+<div> 
+    <label >alias</label>
+    <input type="text" id="aliasId" >
+</div>
+
+<input type="button"onclick="swapped()" value="Click Me" />
+<div id="div" style="background-color:aquamarine">helloo</div>
+<p id="myNewP"></p>
+<img id="img1" src="images/image2.jpeg">
+<a id="google" href="http://www.google.com">google.com</a>
+
+<input id=" myInput" type="text">
+
+</body>
+</html>

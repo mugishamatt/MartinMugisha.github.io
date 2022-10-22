@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload=function(){
+       let flowArr = ['rose', 'chrysanthemum', 'tulip'];
+      // document.querySelector("select").multiple = true;
+
+       let divP=document.createElement('div')
+       document.body.append(divP)
+    let selec=document.createElement("select")
+    divP.append(selec)
+       for(let flow of flowArr){
+       
+        let option=document.createElement('option')
+        option.innerHTML=flow;
+        selec.append(option)
+        // selec.innerHTML +='<option>'+ flow +'</option>'
+
+}
+
+
+function selectAll(){
+           document.querySelector("select").multiple = true;
+
+        }
+        
+       }
+       
+
+
+
+</script>
+<body>
+    <label for=""> names</label>
+    
+</body>
+</html>

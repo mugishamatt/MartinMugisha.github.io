@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="blog.css" />
+    <style>
+      header {
+        /* border: 5px solid gray; */
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .headright {
+        display: flex;
+        padding: 10px;
+      }
+      .headleft {
+        padding: 10px;
+      }
+      .item {
+        margin: 20px;
+      }
+      /* grid */
+
+      section{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        border: 5px lightgray grey; 
+        margin-top: 30px;
+
+
+      }
+      .gridcontainer {
+        
+
+     
+      }
+      .gridOne {
+        border: 1px solid grey;
+      }
+      .gridTwo {
+        border: 1px solid grey;
+      }
+      .gridThree {
+        border: 1px solid grey;
+      }
+      .searcharea{
+        display: flex;
+        gap:10px;
+
+
+      }
+      .textarea{
+        border: 1px solid gray;
+        height: 20px;
+        width: 80px;
+        margin-bottom: 20px;
+      }
+      .textarea1{
+        border: 1px solid gray;
+        height: 20px;
+        width: 30px;
+        margin-bottom: 20px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- <div class="containerheader"> -->
+      <div class="headleft">
+        <div style="font-weight: bold">Bidhan Tech Blog</div>
+        <div>an exemple of blog</div>
+      </div>
+
+      <div class="headright">
+        <div class="item">Home</div>
+        <div class="item">Services</div>
+        <div class="item">About</div>
+        <div class="item">Contact</div>
+      </div>
+
+      <!-- </div> -->
+    </header>
+
+    <section>
+    <div class="gridcontainer">
+      <div class="gridOne">
+        <h2>An Exemple post #3</h2>
+        <div style="margin-bottom: 20px">some text here</div>
+        <div class="imgdiv" style="display: flex">
+          <img src="images/webdev.png" height="100px" width="100px" />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea inventore
+          veritatis porro adipisci, voluptas veniam in reiciendis recusandae
+          fuga atque esse odit earum. Deserunt error dolores eaque sequi aliquid
+          iste?
+        </div>
+      </div>
+      <!--  -->
+      <div class="gridTwo">
+        <h2>An Exemple post #2</h2>
+        <div style="margin-bottom: 20px">some text here</div>
+        <div class="imgdiv" style="display: flex">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea inventore
+          veritatis porro adipisci, voluptas veniam in reiciendis recusandae
+          fuga atque esse odit earum. Deserunt error dolores eaque sequi aliquid
+          iste?
+        </div>
+      </div>
+      <!--  -->
+      
+      <div class="gridThree">
+        <h2>An Exemple post #1</h2>
+        <div style="margin-bottom: 20px">some text here</div>
+        <div class="imgdiv" style="display: flex">
+          <img src="images/webdev.png" height="100px" width="100px" />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea inventore
+          veritatis porro adipisci, voluptas veniam in reiciendis recusandae
+          fuga atque esse odit earum. Deserunt error dolores eaque sequi aliquid
+          iste?
+        </div>
+      </div>
+      </div>
+
+      <!-- righ part -->
+      <div class="gridTwo">
+        <div class="search style" style="margin-left:10px" >
+            <h2 style="border-bottom: 5px solid black;">search</h1>
+            
+                <div class="searcharea">
+                    search here
+                <div class="textarea">
+                     type here
+                </div>
+                <div class="textarea1">
+                    click
+               </div>
+            </div>
+            
+
+        </div>
+        <!--  -->
+        <div class="search" style="margin-left:10px" >
+            <h2 style="border-bottom: 5px solid black;">Recent post</h1>
+                <div style="margin-bottom: 10px;margin-left: 10px;">
+                <div >an exemple post</div>
+                <div >an exemple post</div>
+                <div >an exemple post</div>
+                <div >an exemple post</div>
+             </div>
+            </div>
+
+             <!--  -->
+             <div class="search"style="margin-left:10px">
+                <h2 style="border-bottom: 5px solid black;">pages category</h1>
+                    <div style="margin-bottom: 10px;margin-left: 10px;">
+                    <div >an exemple post</div>
+                    <div >an exemple post</div>
+                    <div >an exemple post</div>
+                    <div >an exemple post</div>
+                </div>
+                 </div>
+                 <!--  -->
+                 <div class="search" style="margin-left:10px ;">
+                    <h2 style="border-bottom: 5px solid black;">Recent post</h1>
+                        <div >an exemple post</div>
+                        <div >an exemple post</div>
+                        <div >an exemple post</div>
+                        <div >an exemple post</div>
+                     </div>
+
+        </div>
+      </div>
+      
+
+    </section>
+   
+
+  
+    
+
+   </div>
+
+   
+    <!-- <footer>designed by mart</footer> -->
+  </body>
+</html>

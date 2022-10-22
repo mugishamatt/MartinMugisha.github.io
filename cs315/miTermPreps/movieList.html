@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      header {
+        text-align: center;
+        background-color: aqua;
+      }
+      li{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+       
+      }
+      .delete{
+        background-color: brown;
+        width: 40%;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body>
+    <header>
+      <h1>movie list</h1>
+      <div>accurate movies</div>
+    </header>
+
+    <div class="movies">
+      <h2>Movies to wach</h2>
+      <ul >
+        <li>
+        <span class="name"> movie 1</span>
+          <span class="delete"> delete</span>
+        </li>
+        <li>
+          <span class="name"> movie 2</span>
+          <span class="delete"> delete</span>
+        </li>
+        <li>
+          <span class="name"> movie2</span>
+          <span class="delete"> delete</span>
+        </li>
+        <li>
+          <span class="name"> movie3</span>
+          <span class="delete"> delete</span>
+
+        </li>
+      </ul>
+    </div>
+
+    <form id="dorm_id">
+        <input type="text" placeholder="add movie.." id="addmovie">
+        <button style="background-color: greenyellow;">add</button>
+    </form>
+  </body>
+</html>
