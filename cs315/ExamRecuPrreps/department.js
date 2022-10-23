@@ -11,7 +11,6 @@ let company = {
     }
     }
 }
-
 function findMax(obj){
     if(Array.isArray(obj)){
         return obj.reduce((prev,current)=>prev+current.salary,0)
