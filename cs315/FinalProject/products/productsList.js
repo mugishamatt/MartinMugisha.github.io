@@ -32,7 +32,7 @@ function buildList(arrProducts){
     myDiv.id="myDiv"
     document.body.append(myDiv)
     for(let items of arrProducts){
-        2
+        
     }
 
 }
