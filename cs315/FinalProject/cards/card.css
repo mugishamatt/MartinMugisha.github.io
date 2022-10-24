@@ -1,4 +1,4 @@
-.course-container .card{
+.product-container .card{
     width: 240px;
     background: #fff;
     font-family: "Roboto", sans-serif;
@@ -7,14 +7,14 @@
     position: relative;
     transition: all 400ms ease;
 }
-.course-container .card:hover{
+.product-container .card:hover{
     transform: scale(1.03);
 }
-.course-container,.course-container *{
+.product-container,.product-container *{
     box-sizing: border-box;
 }
 
-.course-container .card a{
+.product-container .card a{
     text-decoration: none;
     color: #142113;
     display: flex;
@@ -23,12 +23,12 @@
     height: 100%;
 
 }
-.course-container .card img{
+.product-container .card img{
     margin: -16px;
     object-fit:cover;
 }
 
-.course-container .card .category{
+.product-container .card .category{
     position: absolute;
     top: 8px;
     right: 8px;
@@ -40,20 +40,20 @@
     border-radius: 10px;
 }
 
-.course-container .card h2.title{
+.product-container .card h2.title{
     font-size: 20px;
     margin: 28px 0 10px 0;
     line-height: 1.4;
 }
 
-.course-container .description{
+.product-container .description{
     font-size: 15px;
     color: #333;
     margin: 0;
     line-height:1.7 ;
 }
 
-.course-container .card .info{
+.product-container .card .info{
     display: flex;
     justify-content: space-between;
     background: #edf6f9;
@@ -63,33 +63,33 @@
     align-items: center;
 }
 
-.course-container .card .info .price{
+.product-container .card .info .price{
     font-size: 28px;
     font-weight: 900;
     color: #df0688;
 }
 
-.course-container .card .info .price::before{
+.product-container .card .info .price::before{
     content: "$";
     font-size: 18px;
     font-weight: normal;
 }
 
-.course-container .card .info .discount{
+.product-container .card .info .discount{
     display: flex;
 }
 
-/* .course-container .card .info .time-icon{
+/* .product-container .card .info .time-icon{
     width: 18px;
     height: 18px;
 } */
 
-.course-container .card .info .discount:after{
+.product-container .card .info .discount:after{
     content: "discount";
     margin-left: 4px;
 }
 
-.course-container {
+.product-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 32px;
@@ -111,19 +111,19 @@
 
 /* when minimize screen become two col */
 @media(max-width: 850px){
-    .course-container {
+    .product-container {
         grid-template-columns: 1fr 1fr;
     }
-    .course-container .card{
+    .product-container .card{
         width: 100%;
     }
-    .course-container .card img{
+    .product-container .card img{
         height: 200px;
     }
 }
 /* mobile version becomes one col*/
 @media(max-width: 600px){
-    .course-container{
+    .product-container{
         grid-template-columns: 1fr;
         max-width: 320px;
     }
