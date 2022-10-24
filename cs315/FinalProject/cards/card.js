@@ -6,7 +6,7 @@ const arrProducts= [
         category: "top",
         description: " new+ good quality",
         price:"34.99",
-        duration: "12",
+       
         discount:" 20%"
     },
     {
@@ -16,8 +16,8 @@ const arrProducts= [
         category: "accessories",
         description: "Online only",
         price:"45.99",
-        duration: "11",
-        discount:" 20%"
+        
+        discount:" 50%"
     },
    
     {
@@ -27,7 +27,7 @@ const arrProducts= [
         category: "top",
         description: "online only",
         price:"45.99",
-        duration: "11",
+        
         discount:" 20%"
     },
     {
@@ -37,7 +37,7 @@ const arrProducts= [
         category: "bottom",
         description: " this a nice quality",
         price:"45.99",
-        duration: "11",
+       
         discount:" 20%"
     },
     {
@@ -47,7 +47,7 @@ const arrProducts= [
         category: "bottom",
         description: " online only",
         price:"45.99",
-        duration: "12",
+        
         discount:" 20%"
     },
     {
@@ -57,8 +57,8 @@ const arrProducts= [
         category: "accessories",
         description: " verrythis a nice quality",
         price:"45.99",
-        duration: "11",
-        discount:" 20%"
+       
+        discount:" 50%"
     },
     {
         url: "#",
@@ -67,7 +67,7 @@ const arrProducts= [
         category: "bottom",
         description: " good+good Quality",
         price:"45.99",
-        duration: "12",
+        
         discount:" 20%"
     },
   
@@ -78,8 +78,8 @@ const arrProducts= [
         category: "accessories",
         description: " new+ good quality",
         price:"40.99",
-        duration: "11",
-        discount:" 20%"
+       
+        discount:" 30%"
     },
     {
         url: "#",
@@ -88,7 +88,7 @@ const arrProducts= [
         category: "top",
         description: " good+good Quality",
         price:"49.99",
-        duration: "12",
+        
         discount:" 20%"
     }
   
@@ -100,7 +100,7 @@ const arrProducts= [
 const courseContainer = document.querySelector(".course-container")
 
 const displayProducts = (urlValue, titleValue,categoryValue,imageValue,
-    descriptionValue, priceValue, durationValue)=>{
+    descriptionValue, priceValue,discountValue)=>{
         //create card 
    const card = document.createElement("div");
    card.classList.add("card");
@@ -139,23 +139,12 @@ const displayProducts = (urlValue, titleValue,categoryValue,imageValue,
    price.classList.add("price");
    price.innerHTML= priceValue;
 
-   //duration 
-   const duration = document.createElement("div");
-   duration.classList.add("duration");
 
-   //icon
+  //discount
 
-   const timeIcon = document.createElement("div");
-   timeIcon.classList.add("time-icon");
-   timeIcon.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
-   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
- </svg>`
-
- //duration value
-
- const value = document.createElement("div");
- value.classList.add("value");
- value.innerHTML= durationValue;
+  const discount=document.createElement("div");
+  discount.classList.add("discount")
+  discount.innerHTML=discountValue;
 
  //append element
   courseContainer.appendChild(card);
@@ -166,9 +155,9 @@ const displayProducts = (urlValue, titleValue,categoryValue,imageValue,
   a.appendChild(description);
   a.appendChild(info);
   info.appendChild(price);
-  info.appendChild(duration);
-  duration.appendChild(timeIcon);
-  duration.appendChild(value);
+
+  info.appendChild(discount);
+
 
 
 };
@@ -178,7 +167,8 @@ const generateData = ()=>{
         displayProducts(element.url,element.title, 
             element.category,element.image,
             element.description, element.price,
-             element.duration)
+            element.discount)
+            console.log(element.discount)
     });
 };
 

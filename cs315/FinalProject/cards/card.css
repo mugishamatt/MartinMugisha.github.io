@@ -75,17 +75,17 @@
     font-weight: normal;
 }
 
-.course-container .card .info .duration{
+.course-container .card .info .discount{
     display: flex;
 }
 
-.course-container .card .info .time-icon{
+/* .course-container .card .info .time-icon{
     width: 18px;
     height: 18px;
-}
+} */
 
-.course-container .card .info .duration::after{
-    content: "Hrs";
+.course-container .card .info .discount:after{
+    content: "discount";
     margin-left: 4px;
 }
 
@@ -96,6 +96,19 @@
     max-width:800px ;
     margin: 20px auto;
 }
+
+.discount{
+    /* position: absolute;   */
+    /* background: #fff; */
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    left: 10px;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+
 /* when minimize screen become two col */
 @media(max-width: 850px){
     .course-container {

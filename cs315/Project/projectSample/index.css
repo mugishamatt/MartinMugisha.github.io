@@ -30,7 +30,7 @@
 }
 
 .discount-tag{
-     /* position: absolute;  */
+   position: absolute;  
     background: #fff;
     padding: 5px;
     border-radius: 5px;
