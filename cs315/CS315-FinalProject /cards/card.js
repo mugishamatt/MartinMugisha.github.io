@@ -1,6 +1,6 @@
 const arrProducts = [
   {
-    url: "#",
+    url: "#exampleModal1",
     title: "AE Super Soft Hooded Flannel Shacket",
     image: "./images/four.webp",
     category: "top",
@@ -10,13 +10,13 @@ const arrProducts = [
     discount: " 20%",
   },
   {
-    url: "#",
+    url: "#exampleModal2",
     title: "AEO Plastic Frame Aviator Sunglasses",
     image: "./images/sunglass.webp",
     category: "accessories",
     description: "Online only",
     price: "45.99",
-    id: 1,
+    id: 2,
     discount: " 50%",
   },
 

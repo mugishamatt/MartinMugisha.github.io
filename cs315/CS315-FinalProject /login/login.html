@@ -51,13 +51,12 @@
          loginBtn.onclick =(
             () => {
                if(username.value == "admin@miu.edu" && password.value == "admin"){
+                  console.log("loggedIn as admin");
                   window.location = "../inventory/inventory.html";
-               }else if (username.value=="customer@miu.edu"&&password.value=="customer"){
-              
-                  window.location = "../home.html"
+               }
              
-            }else{
-               alert("enter a valid  email or password")
+            else{
+               window.location = "../home.html";
             }
 
          });

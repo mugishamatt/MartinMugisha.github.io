@@ -117,33 +117,35 @@
       
     </ul>
   </div>
+ 
+
   <div class="filter-sort">
    <p> Filter + Sort</p>
   <hr>
 
   </div>
  
-   <div class="radios"> 
+  <div class="radios"> 
     <p class="sort-text"> Sort By</p>
     <div>
     <div>
-    <input type="radio" id="idFeautured" value="featured" name="sort" >
+    <input type="radio" id="idFeautured" value="featured" name="sort"  onclick="filter(this)">
     <label for="">Featured</label><br>
    </div>
    <div>
-    <input type="radio" id="idLower-to-high"   value="lower-to high" name="sort">
+    <input type="radio" id="idLower-to-high"   value="lower" name="sort"  onclick="sort(this)">
     <label for="">Price: Low To High</label><br>
    </div>
    <div>
-    <input type="radio" id="idHigh-to-lower"  value="high-to lower" name="sort" >
+    <input type="radio" id="idHigh-to-lower"  value="high" name="sort"  onclick="sort(this)" >
     <label for=""> Price: High To Low</label><br>
    </div>
    <div>
-    <input type="radio" id="idNewest" value="Newest" name="sort"  >
+    <input type="radio" id="idNewest" value="newest" name="sort"  onclick="filter(this)" >
     <label for="">Newest</label><br>
    </div>
     <div>
-      <input type="radio" id=" online" value="Online Only" name="sort"  >
+      <input type="radio" id=" online" value="onlineOnly" name="sort" onclick="filter(this)" >
       <label for=""> Online Only</label>
     </div>
   </div>
@@ -158,10 +160,38 @@
 <!-- from card page -->
 <script src="./cards/card.js"></script>
 
+<script>
+  let filterDataMap = {
+    onlineOnly: "online only",
+    newest: "new+ good quality",
+    featured: "featured"
+  };
+  console.log("ALL", arrProducts)
 
+  function sort(e) {
+    let value = e.value;
+    
+    if(value == "lower") {
+      const data = sortingByPriceLower();
+      generateDataAfter(data)
+    }
+    else if(value=="high"){
+      const datap = sortingByPriceHigh();
+      generateDataAfter(datap)
+    }
+    
+  }
 
+  function filter(e) {
+    let value = e.value;
 
-
+    let filteredArr = arrProducts.filter(p => {
+      return p.description.toLowerCase().includes(filterDataMap[value]);
+    })
+    generateDataAfter(filteredArr);
+  }
+</script>
+        
 <!-- home page boostrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
