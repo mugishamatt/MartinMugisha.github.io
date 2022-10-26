@@ -93,6 +93,11 @@ const arrProducts = [
   },
 ];
 
+
+
+  
+
+
 //need this to append
 const productContainer = document.querySelector(".product-container");
 
@@ -173,11 +178,11 @@ const generateData = () => {
       element.price,
       element.discount
     );
-    console.log(element.discount);
+    // console.log(element.discount);
   });
 };
 
-generateData();
+
 
 // generate after
 function generateDataAfter(data) {
@@ -226,3 +231,8 @@ function getItemById(id) {
   }
   return null;
 }
+
+
+ 
+
+
