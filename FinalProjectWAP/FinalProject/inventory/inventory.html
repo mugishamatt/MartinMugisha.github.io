@@ -54,12 +54,12 @@
     </tr>
   </table>
   <script>
-    var array = [];
-    var index = 0;
+    let array = [];
+    let index = 0;
 
     function add() {
       index++;
-      var item = {
+      let item = {
         id: index, title: document.getElementById("title").value,
         category: document.getElementById("category").value,
         description: document.getElementById("description").value,
@@ -105,15 +105,15 @@
         console.log(this)//button
         console.log(this.parentNode)//td
         console.log(this.parentNode.parentNode)//tr
-        console.log(this.parentNode.parentNode.childNodes)// All 5 columns(td's)
+        console.log(this.parentNode.parentNode.childNodes)
         let childNodes = this.parentNode.parentNode.childNodes;
 
-        document.getElementById("title").value = ""//childNodes[0].innerHTML;
-        document.getElementById("category").value = ""//childNodes[1].innerHTML;
-        document.getElementById("description").value = ""//childNodes[1].innerHTML;
-        document.getElementById("quantity").value = 4//childNodes[2].innerHTML;
-        document.getElementById("price").value = 5//childNodes[1].innerHTML;
-        document.getElementById("discount").value = 6//childNodes[1].innerHTML;
+        document.getElementById("title").value = "initial value"
+        document.getElementById("category").value = "initial value"
+        document.getElementById("description").value = "initial value"
+        document.getElementById("quantity").value = 0
+        document.getElementById("price").value = 0
+        document.getElementById("discount").value = 0
 
         let myId = this.getAttribute("myId");
         array.forEach(function (item) {
