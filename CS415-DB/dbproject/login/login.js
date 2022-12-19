@@ -49,11 +49,11 @@ app.post('/auth', function(request, response) {
 				request.session.loggedin = true;
 				request.session.user_id = user_id;
 				// Redirect to home page
-				response.redirect('http://127.0.0.1:5501/FinalProjectWAP/FinalProject/home.html');
+				response.redirect('http://localhost:105');
 
-               
+				
 			}else{
-				response.redirect('http://localhost:105')
+				response.redirect('http://127.0.0.1:5501/FinalProjectWAP/FinalProject/home.html')
 			}
 		} 
             
