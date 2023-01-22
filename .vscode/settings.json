@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "livePreview.defaultPreviewPath": "/Users/martinmugisha/Documents/GitHub/MartinMugisha.github.io/CS415-DB/dbproject/mongo-415/client/home.html"
 }
